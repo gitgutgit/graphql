@@ -1,9 +1,11 @@
 from flask import Flask
 from flask_graphql import GraphQLView
 from graphene import ObjectType, String, Int, List, Schema, Float
+from flask_cors import CORS
 import requests
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Define GraphQL types
 class ChunkResult(ObjectType):
